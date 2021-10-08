@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- <link rel="icon" href="favicon.ico"> -->
+
+    <title>NRR Calculator</title>
+
+    <!-- Bootstrap core CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="nrrCalculator.css" />
+  </head>
+
+  <body class="bg-light">
+    <div class="container">
+      <div class="py-5 text-center">
+        <h2><b>Net Run Rate (NRR) Calculator</b></h2>
+        <h6>
+          <p class="lead">
+            Net Run Rate (NRR) in cricket is a statistical method of analysing
+            and compare the performance of a team usually during a multi-team
+            tournament. The Net Run Rate plays a critical role to decide which
+            team qualifies for the next round when two or more teams end up with
+            the same number of points.
+          </p>
+        </h6>
+        <p>
+          The NRR in a tournament is the average runs per over that a team
+          scores across the whole tournament, minus the average runs per over
+          that is scored against them across the whole tournament
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2 order-md-1"></div>
+        <div class="col-md-8 order-md-2">
+          <form class="needs-validation" novalidate>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="fInngRuns"><b>Runs Scored (For)</b></label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="fInngRuns"
+                  placeholder="Total Runs Scored"
+                  value=""
+                  min="0"
+                  max="10000"
+                  required
+                />
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="fInngOvers"><b>Overs Faced (For)</b></label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="fInngOvers"
+                  placeholder="Total Overs Faced (decimal format)"
+                  value=""
+                  min="0"
+                  max="2000"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="sInngRuns"><b>Runs Conceded (Againts)</b></label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="sInngRuns"
+                  placeholder="Total Runs Conceded"
+                  value=""
+                  min="0"
+                  max="10000"
+                  required
+                />
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="sInngOvers"><b>Overs Bowled (Againts)</b></label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="sInngOvers"
+                  placeholder="Total Overs Bowled (decimal format)"
+                  value=""
+                  min="0"
+                  max="2000"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="nrrTBF"><b>NRR of the Team</b></label>
+              <input type="text" class="form-control" id="nrrTBF" readonly />
+            </div>
+
+            <!-- <div class="mb-3">
+              <label for="nrrTBS">NRR of Team that Batted Second</label>
+              <input type="text" class="form-control" id="nrrTBS" readonly />
+            </div> -->
+            <hr class="mb-4" />
+          </form>
+          <p>
+            <strong>Instruction :</strong> No. of overs must be in decimal
+            format (eg. 2.5 Overs, 25.0 Overs)
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="nrrCalculator.js"></script>
+  </body>
+</html>
