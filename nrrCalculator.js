@@ -1,4 +1,3 @@
-//"^[0-9]\d{0,2}$"
 jQuery(function ($) {
   $(document).ready(function () {
     (function () {
@@ -6,31 +5,17 @@ jQuery(function ($) {
         "input",
         function () {
           var b1r = $("#fInngRuns").val();
-          var b1o = $("#fInngOvers").val();
+          var b1o = parseFloat($("#fInngOvers").val()); // Parse the input value as a float
           var b2r = $("#sInngRuns").val();
-          var b2o = $("#sInngOvers").val();
-          if (b1o.includes(".")) {
-            var reo = b1o.split(".");
-            if (b2o.includes(".")) {
-              var res = b2o.split(".");
+          var b2o = parseFloat($("#sInngOvers").val()); // Parse the input value as a float
 
-              if (b1r != "" && b1o != "" && b2r != "" && b2o != "") {
-                var frr = b1r / (Number(reo[0]) + Number(reo[1] / 6));
-                var srr = b2r / (Number(res[0]) + Number(res[1] / 6));
-                var calc = Number(frr - srr).toFixed(14);
-                //       var calc = ((b1r / b1o) - (b2r / (Number(res[0]) + Number((res[1] / 6)))));
-                $("#nrrTBF").val(-(-calc));
-                //   $("#nrrTBS").val(-calc);
-              }
+          if (!isNaN(b1o) && !isNaN(b2o)) {
+            if (b1r != "" && !isNaN(b1o) && b2r != "" && !isNaN(b2o)) {
+              var frr = b1r / b1o;
+              var srr = b2r / b2o;
+              var calc = Number(frr - srr).toFixed(14);
+              $("#nrrTBF").val(-(-calc));
             }
-            //     else {
-            //     if (b1r != "" && b1o != "" && b2r != "" && b2o != "") {
-            //       var frr = b1r / b1o;
-            //       var srr = b2r / b2o;
-            //       var calc = Number(frr - srr).toFixed(14);
-            //       $("#nrrTBF").val(-(-calc));
-            //       //   $("#nrrTBS").val(-calc);
-            //     }
           }
         }
       );
