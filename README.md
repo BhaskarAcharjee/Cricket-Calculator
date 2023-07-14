@@ -34,4 +34,4 @@ The Duckworth Lewis Target Calculator will provide the calculated target score f
 
 ## Contributing
 
-Contributions to the Cricket Calculator project are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue on the [GitHub repository](https://bhaskaracharjee.github.io/Cricket-Calculator/issues).
+Contributions to the Cricket Calculator project are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue on the [GitHub repository](https://github.com/BhaskarAcharjee/Cricket-Calculator/issues).
