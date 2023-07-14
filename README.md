@@ -19,17 +19,3 @@ The NRR Calculator will provide the calculated NRR value based on the inputs pro
 ## Contributing
 
 Contributions to the NRR Calculator project are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue on the [GitHub repository](https://github.com/BhaskarAcharjee/NRR-Calculator/issues).
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
-## Credits
-
-The NRR Calculator web application is developed by [Bhaskar Acharjee](https://github.com/BhaskarAcharjee). 
-
-## Acknowledgements
-
-- [Cricket](https://en.wikipedia.org/wiki/Cricket) - Cricket is a bat-and-ball game played between two teams of eleven players.
-- [Net Run Rate](https://en.wikipedia.org/wiki/Net_run_rate) - Net Run Rate is a statistical measure used in cricket to determine the average number of runs that a team scores per over compared to the average number of runs scored against them per over.
-- [GitHub Pages](https://pages.github.com/) - GitHub Pages is a static site hosting service that allows you to host your web projects directly from your GitHub repository.
