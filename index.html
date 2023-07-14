@@ -1,133 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <link rel="icon" href="imgNRR/CricketLogo.png">
 
-    <title>NRR Calculator</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="icon" href="imgNRR/CricketLogo.png">
 
-    <!-- Bootstrap core CSS -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-    <!-- Custom styles for this template -->
-    <link rel="stylesheet" type="text/css" href="nrrCalculator.css" />
-  </head>
+  <title>Cricket Calculator</title>
 
-  <body class="bg-light">
-    <div class="container">
-      <div class="py-5 text-center">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" type="text/css" href="nrrCalculator.css" />
+</head>
+
+<body class="bg-light">
+  <div class="container">
+    <div class="py-5 text-center">
+      <h1><b>Cricket Calculator</b></h1>
+    </div>
+
+    <ul class="nav nav-tabs" id="calculatorTabs" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="nrr-tab" data-toggle="tab" href="#nrrCalculator" role="tab"
+          aria-controls="nrrCalculator" aria-selected="true">Net Run Rate (NRR) Calculator</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="dls-tab" data-toggle="tab" href="#dlsCalculator" role="tab"
+          aria-controls="dlsCalculator" aria-selected="false">Duckworth Lewis Target Calculator</a>
+      </li>
+    </ul>
+
+    <div class="tab-content mt-4">
+      <div class="tab-pane fade show active" id="nrrCalculator" role="tabpanel" aria-labelledby="nrr-tab">
         <h2><b>Net Run Rate (NRR) Calculator</b></h2>
-        <h6>
-          <p class="lead">
-            Net Run Rate (NRR) in cricket is a statistical method of analysing
-            and compare the performance of a team usually during a multi-team
-            tournament. The Net Run Rate plays a critical role to decide which
-            team qualifies for the next round when two or more teams end up with
-            the same number of points.
+        <div class="description">
+          <p>
+            Net Run Rate (NRR) in cricket is a statistical method used to analyze and compare the performance of a team
+            during a multi-team tournament. It helps determine the ranking of teams when they have the same number of
+            points. The NRR is calculated by subtracting the average runs per over scored against the team from the
+            average runs per over scored by the team.
           </p>
-        </h6>
+        </div>
+        <form class="needs-validation" novalidate>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="fInngRuns"><b>RUNS SCORED (TEAM A)</b></label>
+              <input type="number" class="form-control" id="fInngRuns" placeholder="Total Runs Scored" value="" min="0"
+                max="10000" required />
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="fInngOvers"><b>OVERS FACED (TEAM A)</b></label>
+              <input type="number" class="form-control" id="fInngOvers" placeholder="Total Overs Faced (decimal format)"
+                value="" min="0" max="2000" required />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="sInngRuns"><b>RUNS CONCEDED (TEAM B)</b></label>
+              <input type="number" class="form-control" id="sInngRuns" placeholder="Total Runs Conceded" value=""
+                min="0" max="10000" required />
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="sInngOvers"><b>OVERS BOWLED (TEAM B)</b></label>
+              <input type="number" class="form-control" id="sInngOvers"
+                placeholder="Total Overs Bowled (decimal format)" value="" min="0" max="2000" required />
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="nrrTBF"><b>THE NRR FOR TEAM A IS:</b></label>
+            <input type="text" class="form-control" id="nrrTBF" readonly />
+          </div>
+
+          <hr class="mb-4" />
+        </form>
         <p>
-          The NRR in a tournament is the average runs per over that a team
-          scores across the whole tournament, minus the average runs per over
-          that is scored against them across the whole tournament
+          <strong>Instruction :</strong> Enter the runs and overs data for both teams to calculate the Net Run Rate
+          (NRR).
         </p>
       </div>
 
-      <div class="row">
-        <div class="col-md-2 order-md-1"></div>
-        <div class="col-md-8 order-md-2">
-          <form class="needs-validation" novalidate>
-            <div class="row">
-              <div class="col-md-6 mb-3">
-                <label for="fInngRuns"><b>Runs Scored (For)</b></label>
-                <input
-                  type="number"
-                  class="form-control"
-                  id="fInngRuns"
-                  placeholder="Total Runs Scored"
-                  value=""
-                  min="0"
-                  max="10000"
-                  required
-                />
-              </div>
-              <div class="col-md-6 mb-3">
-                <label for="fInngOvers"><b>Overs Faced (For)</b></label>
-                <input
-                  type="number"
-                  class="form-control"
-                  id="fInngOvers"
-                  placeholder="Total Overs Faced (decimal format)"
-                  value=""
-                  min="0"
-                  max="2000"
-                  required
-                />
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-6 mb-3">
-                <label for="sInngRuns"><b>Runs Conceded (Againts)</b></label>
-                <input
-                  type="number"
-                  class="form-control"
-                  id="sInngRuns"
-                  placeholder="Total Runs Conceded"
-                  value=""
-                  min="0"
-                  max="10000"
-                  required
-                />
-              </div>
-              <div class="col-md-6 mb-3">
-                <label for="sInngOvers"><b>Overs Bowled (Againts)</b></label>
-                <input
-                  type="number"
-                  class="form-control"
-                  id="sInngOvers"
-                  placeholder="Total Overs Bowled (decimal format)"
-                  value=""
-                  min="0"
-                  max="2000"
-                  required
-                />
-              </div>
-            </div>
-
-            <div class="mb-3">
-              <label for="nrrTBF"><b>NRR of the Team</b></label>
-              <input type="text" class="form-control" id="nrrTBF" readonly />
-            </div>
-
-            <!-- <div class="mb-3">
-              <label for="nrrTBS">NRR of Team that Batted Second</label>
-              <input type="text" class="form-control" id="nrrTBS" readonly />
-            </div> -->
-            <hr class="mb-4" />
-          </form>
+      <div class="tab-pane fade" id="dlsCalculator" role="tabpanel" aria-labelledby="dls-tab">
+        <h2><b>Duckworth Lewis Stern (DLS) Calculator</b></h2>
+        <div class="description">
           <p>
-            <strong>Instruction :</strong> Enter the runs and overs data for both teams to calculate the Net Run Rate (NRR).
+            The Duckworth Lewis Stern (DLS) method is a mathematical formula used to calculate the target score for the
+            team batting second in limited-overs cricket matches that are interrupted by weather conditions. It takes
+            into account the number of runs scored and wickets lost by the team batting first, as well as the number of
+            overs available to the team batting second.
           </p>
         </div>
+        <form class="needs-validation" novalidate>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="teamAScore"><b>TEAM A SCORED</b></label>
+              <input type="number" class="form-control" id="teamAScore" placeholder="Team A Score" value="" min="0"
+                required />
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="teamAWickets"><b>FOR THE LOSS OF (WICKETS)</b></label>
+              <input type="number" class="form-control" id="teamAWickets" placeholder="Team A Wickets" value="" min="0"
+                required />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="teamAExtraOvers"><b>AFTER (OVERS)</b></label>
+              <input type="number" class="form-control" id="teamAExtraOvers" placeholder="Overs for Team B" value=""
+                min="0" step="0.1" required />
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="teamBWickets"><b>FOR THE LOSS OF (WICKETS)</b></label>
+              <input type="number" class="form-control" id="teamBWickets" placeholder="Team B Wickets" value="" min="0"
+                required />
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="dlsResult"><b>THE TARGET FOR TEAM B IS: </b></label>
+            <input type="text" class="form-control" id="dlsResult" readonly />
+          </div>
+
+          <hr class="mb-4" />
+        </form>
+        <p>
+          <strong>Instruction:</strong> Enter the necessary data for Team A and Team B to calculate the Duckworth Lewis
+          target for Team B.
+        </p>
       </div>
     </div>
+  </div>
 
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"
-    ></script>
-    <script type="text/javascript" src="nrrCalculator.js"></script>
-  </body>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="nrrCalculator.js"></script>
+</body>
+
 </html>
