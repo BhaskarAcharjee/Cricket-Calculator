@@ -9,7 +9,7 @@ The NRR Calculator helps you calculate the Net Run Rate for a cricket team. NRR 
 
 To use the NRR Calculator:
 
-1. Visit the [Cricket Calculator](https://bhaskaracharjee.github.io/NRR-Calculator/) web application.
+1. Visit the [Cricket Calculator](https://bhaskaracharjee.github.io/Cricket-Calculator/) web application.
 2. Enter the total runs scored by the team.
 3. Enter the total overs faced by the team.
 4. Enter the total runs conceded by the team.
@@ -23,7 +23,7 @@ The Duckworth Lewis Target Calculator helps you calculate the target score for t
 
 To use the Duckworth Lewis Target Calculator:
 
-1. Visit the [Cricket Calculator](https://bhaskaracharjee.github.io/NRR-Calculator/) web application.
+1. Visit the [Cricket Calculator](https://bhaskaracharjee.github.io/Cricket-Calculator/) web application.
 2. Switch to the "Duckworth Lewis Target Calculator" tab.
 3. Enter the runs scored by Team A.
 4. Enter the number of wickets lost by Team A.
@@ -34,4 +34,4 @@ The Duckworth Lewis Target Calculator will provide the calculated target score f
 
 ## Contributing
 
-Contributions to the Cricket Calculator project are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue on the [GitHub repository](https://github.com/BhaskarAcharjee/NRR-Calculator/issues).
+Contributions to the Cricket Calculator project are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue on the [GitHub repository](https://bhaskaracharjee.github.io/Cricket-Calculator/issues).
