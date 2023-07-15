@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-  <link rel="icon" href="imgNRR/CricketLogo.png">
+  <link rel="icon" href="images/CricketLogo.png">
 
   <title>Cricket Calculator</title>
 
@@ -30,7 +30,7 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" id="dls-tab" data-toggle="tab" href="#dlsCalculator" role="tab"
-          aria-controls="dlsCalculator" aria-selected="false">Duckworth Lewis Target Calculator</a>
+          aria-controls="dlsCalculator" aria-selected="false">Duckworth Lewis (DLS) Calculator</a>
       </li>
     </ul>
 
@@ -54,7 +54,7 @@
             </div>
             <div class="col-md-6 mb-3">
               <label for="fInngOvers"><b>OVERS FACED (TEAM A)</b></label>
-              <input type="number" class="form-control" id="fInngOvers" placeholder="Total Overs Faced (decimal format)"
+              <input type="number" class="form-control" id="fInngOvers" placeholder="Total Overs Faced"
                 value="" min="0" max="2000" required />
             </div>
           </div>
@@ -68,16 +68,13 @@
             <div class="col-md-6 mb-3">
               <label for="sInngOvers"><b>OVERS BOWLED (TEAM B)</b></label>
               <input type="number" class="form-control" id="sInngOvers"
-                placeholder="Total Overs Bowled (decimal format)" value="" min="0" max="2000" required />
+                placeholder="Total Overs Bowled" value="" min="0" max="2000" required />
             </div>
           </div>
 
-          <div class="mb-3">
-            <label for="nrrTBF"><b>THE NRR FOR TEAM A IS:</b></label>
-            <input type="text" class="form-control" id="nrrTBF" readonly />
-          </div>
+          <label for="nrrTBF"><b>THE NRR FOR TEAM A IS:</b></label>
+          <input type="text" class="form-control" id="nrrTBF" readonly />
 
-          <hr class="mb-4" />
         </form>
         <p>
           <strong>Instruction :</strong> Enter the runs and overs data for both teams to calculate the Net Run Rate
@@ -122,17 +119,15 @@
             </div>
           </div>
 
-          <div class="mb-3">
-            <label for="dlsResult"><b>THE TARGET FOR TEAM B IS: </b></label>
-            <input type="text" class="form-control" id="dlsResult" readonly />
-          </div>
+          <label for="dlsResult"><b>THE TARGET FOR TEAM B IS: </b></label>
+          <input type="text" class="form-control" id="dlsResult" readonly />
 
-          <hr class="mb-4" />
         </form>
         <p>
           <strong>Instruction:</strong> Enter the necessary data for Team A and Team B to calculate the Duckworth Lewis
           target for Team B.
         </p>
+
       </div>
     </div>
   </div>

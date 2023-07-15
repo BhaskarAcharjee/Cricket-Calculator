@@ -1,14 +1,14 @@
-html, body {
+html {
   height: 100%;
 }
 
 body {
   position: relative;
-  background: linear-gradient(135deg, #1a2980, #26d0ce);
+  background: linear-gradient(90deg, #1a2980, #26d0ce);
 }
 
 .container {
-  max-width: 960px;
+  max-width: 1000px;
 }
 
 .border-top {
@@ -108,5 +108,49 @@ input[type="number"]::placeholder {
 /* Set result text color */
 #nrrTBF,
 #dlsResult {
-  color: #000; /* Change the color to black for better visibility */
+  color: #000; 
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  /* Small devices (up to 768px) */
+  .container {
+    padding: 20px; /* Reduce padding for smaller devices */
+  }
+
+  .nav-tabs {
+    margin-bottom: 20px; /* Add gap at the end of the tabs */
+    flex-wrap: wrap; /* Allow tabs to wrap to the next line */
+  }
+
+  .nav-item {
+    flex-basis: 50%; /* Make each tab take up 50% width */
+  }
+
+  .tab-content {
+    margin-bottom: 10px; /* Add gap at the end of the tab content */
+  }
+}
+
+@media (max-width: 576px) {
+  /* Extra small devices (up to 576px) */
+  
+  /* Adjust the font size of the text elements */
+  p,
+  label,
+  input[type="text"],
+  input[type="number"] {
+    font-size: 16px; 
+  }
+  
+  h2 {
+    font-size: 18px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+  
+  .py-5.text-center {
+    margin-top: -30px;
+    margin-bottom: -30px; /* Reduce the margin bottom to decrease the spacing */
+  }
 }
